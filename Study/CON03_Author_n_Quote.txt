@@ -1,0 +1,21 @@
+CREATE TABLE AuthorQuotes (
+zAuthor integer,
+zQuote string
+);
+CREATE TABLE Authors (
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+zName TEXT
+);
+.schema
+/* Our Authors */
+insert into Authors values(NULL, 'Big Kahuna');
+insert into Authors values(NULL, 'Big Bertha');
+select * from authors;
+/* Related Quotes */
+insert into AuthorQuotes values(1, 'Kahuna Q1');
+insert into AuthorQuotes values(1, 'Kahuna Q2');
+insert into AuthorQuotes values(2, 'BB Q1');
+.dump
+/* Notice sqlite_sequence */
+
+

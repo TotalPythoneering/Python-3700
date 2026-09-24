@@ -1,0 +1,29 @@
+-- To lock + automatically update, use .open rather than .restore
+.open QUOTES1.SQLT3
+
+CREATE TABLE AuthorQuotes (
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+zAuthor integer,
+zQuote string
+);
+
+insert into AuthorQuotes values(NULL, 1, 'BK Q1');
+insert into AuthorQuotes values(NULL, 1, 'BK Q2');
+insert into AuthorQuotes values(NULL, 2, 'BB Q1');
+
+/* Selecting Everything */
+select * from AuthorQuotes JOIN Authors where AuthorQuotes.zAuthor = Authors.ID;
+
+/* Field selections */
+select Authors.lName, AuthorQuotes.zQuote from AuthorQuotes JOIN Authors where AuthorQuotes.zAuthor = Authors.ID;
+
+/* Using Aliases */
+Select A.lName, AQ.zQuote from AuthorQuotes AS AQ JOIN Authors AS A where AQ.zAuthor = A.ID;
+
+.dump
+/* Notice sqlite_sequence */
+
+.save QUOTES1.SQLT3
+
+
+

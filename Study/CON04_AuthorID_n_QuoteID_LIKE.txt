@@ -1,0 +1,19 @@
+/* Our Authors */
+CREATE TABLE Authors (
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+fName TEXT,
+lName TEXT
+);
+
+insert into Authors values(NULL, 'Big', 'Kahuna');
+insert into Authors values(NULL, 'Big', 'Bertha');
+
+.save QUOTES1.SQLT3
+
+select * from authors;
+
+SELECT count(*) FROM AUTHORS WHERE fName = 'BIG';
+SELECT * FROM AUTHORS WHERE fName = 'Big';
+SELECT count(*) FROM AUTHORS WHERE fName LIKE('BIG');
+
+.quit

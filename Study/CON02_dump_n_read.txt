@@ -1,0 +1,19 @@
+CREATE TABLE MyQuote (
+zQuote text
+);
+.schema
+insert into MyQuote values('This is a quote');
+select * from MyQuote;
+insert into MyQuote values("This is another quote");
+select * from MyQuote;
+.dump
+.output MyData.SQL
+.dump
+.output
+DROP TABLE MyQuote;
+.schema
+.read MyData.SQL
+.schema
+SELECT * from MyQuote;
+
+
