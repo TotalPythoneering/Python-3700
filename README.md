@@ -1,6 +1,6 @@
 # Course Title
 
-## Python 3700: Python 3000: SQLite Quick-Start
+## Python 3700: SQLite Quick-Start
 
 # Sub-Title
 
